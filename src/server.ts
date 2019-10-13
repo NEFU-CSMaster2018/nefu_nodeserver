@@ -6,13 +6,17 @@ const home = require('./routes/home');
 const app = new Koa();
 const router = new Router();
 
+// db init
+const dbinit = require('../build/dbconnect');
+dbinit.dbconnect();
+
+// default url
 router.get('/', async (ctx) => {
-    ctx.body = 'hello';
+    ctx.body = 'welcome to node server';
 });
 
-// router modules use
+// router module homepage
 router.use('/home', home);
-
 
 
 // add router middleware
