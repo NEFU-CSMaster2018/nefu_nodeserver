@@ -1,7 +1,7 @@
 import * as Koa from 'koa';
 import * as Router from 'koa-router';
 // import router modules
-const home = require('./routes/home');
+const home = require('./routes/home.routes');
 
 const app = new Koa();
 const router = new Router();

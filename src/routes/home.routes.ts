@@ -3,7 +3,7 @@ const router = new Router();
 const homec = require('../controller/home.controller');
 
 router.get('/', homec.home);
-router.get('/:username', homec.username);
+router.post('/edit', homec.edit);
 
 
 module.exports = router.routes();
